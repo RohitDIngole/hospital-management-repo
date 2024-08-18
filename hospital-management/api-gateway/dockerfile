@@ -5,7 +5,8 @@ FROM rohit2127/open-jdk
 WORKDIR /app
 
 # Copy the application JAR file into the container
-COPY api-gateway-hospital-0.0.1-SNAPSHOT.jar /app/api-gateway.jar
+COPY target/api-gateway-0.0.1-SNAPSHOT.jar app.jar
+
 
 # Start the application
 CMD ["java", "-jar", "/app/api-gateway.jar"]
